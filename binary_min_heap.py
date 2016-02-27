@@ -1,6 +1,6 @@
 
 class BinaryMinHeap:
-
+    
     def __init__(self):
         self.heapList = [0]
         self.currentSize = 0
@@ -44,6 +44,17 @@ class BinaryMinHeap:
                 return 2*index +1
             else:
                 return 2*index
+
+    def build_heap(self,num_list):
+        i = len(num_list)
+        self.currentSize = i
+        self.heapList = [0] + num_list[:]
+        while (i>0):
+            self._precdown(i)
+            i = i -1
+
+
+
 
 
 
